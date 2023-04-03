@@ -1,4 +1,5 @@
 import useSWR from 'swr';
+
 import fetcher from '@/libs/fetcher';
 
 const usePost = (postId: string) => {
@@ -7,7 +8,12 @@ const usePost = (postId: string) => {
     fetcher
   );
 
-  return { data, error, isLoading, mutate };
+  return {
+    data,
+    error,
+    isLoading,
+    mutate,
+  };
 };
 
 export default usePost;
